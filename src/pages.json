@@ -1,16 +1,173 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	}
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "demo/index/index",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/layout",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/background",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/text",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/icon",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/button",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/design",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/tag",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/avatar",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/progress",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/shadow",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/basics/loading",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/bar",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/nav",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/list",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/card",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/form",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/timeline",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/chat",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/swiper",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/modal",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/component/steps",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/plugin/indexes",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/plugin/animation",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/plugin/drawer",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+      "path": "demo/plugin/verticalnav",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    }
+  ],
+  "globalStyle": {
+    "mp-alipay": {
+      /* 支付宝小程序特有相关 */
+      "transparentTitle": "always",
+      "allowsBounceVertical": "NO"
+    },
+    "navigationBarBackgroundColor": "#0081ff",
+    "navigationBarTitleText": "ColorUi for UniApp",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponts": true
 }
