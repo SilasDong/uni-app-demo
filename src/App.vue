@@ -3,7 +3,6 @@ import Vue from 'vue'
 export default Vue.extend({
     mpType: 'app',
     onLaunch() {
-      console.log('1', process.env)
       uni.getSystemInfo({
       success: (e: any) => {
         // #ifndef MP
@@ -29,10 +28,8 @@ export default Vue.extend({
     })
   },
   onShow() {
-      console.log('App Show')
   },
   onHide() {
-      console.log('App Hide')
   }
 })
 </script>

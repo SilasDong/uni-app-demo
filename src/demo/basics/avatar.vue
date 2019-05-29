@@ -86,21 +86,21 @@
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				ColorList: this.ColorList,
-				avatar: [
+<script lang="ts">
+import { Component, Mixins, Watch } from 'vue-property-decorator'
+import { Getter, Mutation } from 'vuex-class'
+import BaseMixin from '@/mixins/BaseMixin'
+import ColorList from '@/demo/ColorList'
+@Component
+export default class BasicsAvatar extends Mixins(BaseMixin) {
+ private ColorList: any = ColorList
+ private avatar = [
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg',
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg',
 					'https://ossweb-img.qq.com/images/lol/web201310/skin/big91012.jpg'
-				],
-
-			};
-		}
-	}
+        ]
+}
 </script>
 
 <style>

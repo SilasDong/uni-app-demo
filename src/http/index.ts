@@ -41,7 +41,11 @@ export default class Http {
           })
         },
         fail: (err) => {
-          reject(err)
+          return this.interceptorsResponse(null, params, err).then((res1: any) => {
+            reject(res1)
+          }).catch((err1: any) => {
+            reject(err1)
+          })
         }
       })
     })

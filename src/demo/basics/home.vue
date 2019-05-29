@@ -6,7 +6,7 @@
 			<view class="nav-list">
 				<navigator hover-class="none" :url="'/demo/basics/' + item.name" class="nav-li" navigateTo :class="'bg-'+item.color"
 				 :style="[{animation: 'show ' + ((index+1)*0.2+1) + 's 1'}]" v-for="(item,index) in elements" :key="index">
-					<view class="nav-title">{{item.title}}</view>
+					<view class="nav-title">{{param}}</view>
 					<view class="nav-name">{{item.name}}</view>
 					<text :class="'cuIcon-' + item.icon"></text>
 				</navigator>
@@ -22,7 +22,8 @@ import { Getter, Mutation } from 'vuex-class'
 import BaseMixin from '@/mixins/BaseMixin'
 @Component
 export default class Index extends Mixins(BaseMixin) {
-		private elements = [{
+	private param = ''
+	private elements = [{
 						title: '布局',
 						name: 'layout',
 						color: 'cyan',
@@ -83,7 +84,25 @@ export default class Index extends Mixins(BaseMixin) {
 						icon: 'loading2'
 					}
 				]
+
+	
+	public onReady() {
+		this.init()
 	}
+	
+	public created() {
+		// #ifdef H5
+		this.init()
+		// #endif
+	}
+
+	private init() {
+		this.$api.comm.queryParam('loginDesc').then((res: any) => {
+			this.param = res.data.loginDesc
+      console.log('loginDesc', res.data.loginDesc)
+    })
+	}
+}
 </script>
 
 <style>

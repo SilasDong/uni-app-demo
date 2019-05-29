@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import store from '@/store'
 import { getObjType, timeout } from '@/utils'
 import { showLoading, hideToast, hideLoading, showToast } from '@/utils/ui'
@@ -11,8 +12,13 @@ http.config.headers = {
 }
 // 请求超时的时间限制
 // fly.config.timeout = 15000
-http.config.baseURL = 'https://demo.xmmxgg.com'
-console.log('object1', process.env.VUE_APP_BASE_API)
+const idDev = process.env.NODE_ENV === 'development'
+const isH5 = process.env.VUE_APP_PLATFORM === 'h5'
+if (idDev) {
+  http.config.baseURL = 'https://demo.xxxx.com'
+} else {
+  http.config.baseURL = isH5 ? '/' : 'https://demo.xxxx.com'
+}
 
 // 设置错误请求文字
 const errorMessage = '网络请求错误，请检查网络连接在重试'
@@ -55,12 +61,16 @@ http.interceptors.request((config: any) => {
 })
 
 // 请求到结果的拦截处理
-http.interceptors.response((res: any, config: any) => {
+http.interceptors.response((res: any, config: any, err: any) => {
   // if (res.config.url.includes('m-mysql-backUp-download')) {
   //     console.log('object', res)
   // }
   clearTimeout(config.toast)
   timeout(() => { hideLoading() }, 1100)
+  if (!res) {
+    Promise.reject(err)
+    return
+  }
   const code = res.data.code
   if (code !== undefined && code !== 9999) {
     let message = res && res.data.message
@@ -81,7 +91,5 @@ http.interceptors.response((res: any, config: any) => {
     return Promise.reject(new Error(message))
   }
   return Promise.resolve(res.data)
-}, (err: any) => {
-    return Promise.reject(err)
 })
 export default http

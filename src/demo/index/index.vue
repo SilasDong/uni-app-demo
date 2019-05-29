@@ -34,8 +34,8 @@ import BaseMixin from '@/mixins/BaseMixin'
 export default class Index extends Mixins(BaseMixin) {
   private PageCur = 'basics'
   private NavChange(e: any) {
-      this.PageCur = e.currentTarget.dataset.cur
-    }
+		this.PageCur = e.currentTarget.dataset.cur
+	}
 }
 </script>
 

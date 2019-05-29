@@ -98,24 +98,24 @@
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				ColorList: this.ColorList,
-				shadow: false,
-				bordersize: ''
-			};
-		},
-		methods: {
-			SetShadow(e) {
-				this.shadow = e.detail.value
-			},
-			SetBorderSize(e) {
-				this.bordersize = e.detail.value
-			}
-		}
-	}
+<script lang="ts">
+import { Component, Mixins, Watch } from 'vue-property-decorator'
+import { Getter, Mutation } from 'vuex-class'
+import BaseMixin from '@/mixins/BaseMixin'
+import ColorList from '@/demo/ColorList'
+@Component
+export default class BasicsButton extends Mixins(BaseMixin) {
+  private ColorList: any = ColorList
+  private shadow = false
+  private bordersize = ''
+  private SetShadow(e: any) {
+    this.shadow = e.detail.value
+  }
+  private SetBorderSize(e: any) {
+    this.bordersize = e.detail.value
+  }
+
+}
 </script>
 
 <style>

@@ -126,14 +126,15 @@
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				ColorList: this.ColorList,
-			};
-		}
-	}
+<script lang="ts">
+import { Component, Mixins, Watch } from 'vue-property-decorator'
+import { Getter, Mutation } from 'vuex-class'
+import BaseMixin from '@/mixins/BaseMixin'
+import ColorList from '@/demo/ColorList'
+@Component
+export default class BasicsBackground extends Mixins(BaseMixin) {
+	private ColorList: any = ColorList
+}
 </script>
 
 <style>
