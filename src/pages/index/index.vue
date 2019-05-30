@@ -20,7 +20,7 @@ export default class Index extends Mixins(BaseMixin) {
     this.mSetToken('Hello')
   }
   private jump() {
-    this.$uniRouter.navigateTo('background?abc=122')
+    this.$uniRouter.navigateTo('demoindex?abc=122')
   }
 }
 </script>
