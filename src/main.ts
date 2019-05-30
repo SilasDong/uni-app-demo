@@ -2,6 +2,9 @@ import Vue from 'vue'
 // @ts-ignore
 import App from '@/App.vue'
 import store from '@/store/'
+import router from '@/router/'
+
+Vue.prototype.$uniRouter = router
 
 // @ts-ignore
 import basics from './demo/basics/home.vue'

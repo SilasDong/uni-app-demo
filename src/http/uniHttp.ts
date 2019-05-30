@@ -15,9 +15,9 @@ http.config.headers = {
 const idDev = process.env.NODE_ENV === 'development'
 const isH5 = process.env.VUE_APP_PLATFORM === 'h5'
 if (idDev) {
-  http.config.baseURL = 'https://demo.xxxx.com'
+  http.config.baseURL = 'https://demo.xmmxgg.com'
 } else {
-  http.config.baseURL = isH5 ? '/' : 'https://demo.xxxx.com'
+  http.config.baseURL = isH5 ? '/' : 'https://demo.xmmxgg.com'
 }
 
 // 设置错误请求文字

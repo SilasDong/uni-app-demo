@@ -11,7 +11,6 @@
 import { Component, Mixins, Watch } from 'vue-property-decorator'
 import { Getter, Mutation } from 'vuex-class'
 import BaseMixin from '@/mixins/BaseMixin'
-import router from '@/router/'
 @Component
 export default class Index extends Mixins(BaseMixin) {
   @Getter('token') private token: any
@@ -21,8 +20,7 @@ export default class Index extends Mixins(BaseMixin) {
     this.mSetToken('Hello')
   }
   private jump() {
-    console.log('jump', router)
-    router.navigateTo('demoindex')
+    this.$uniRouter.navigateTo('background?abc=122')
   }
 }
 </script>

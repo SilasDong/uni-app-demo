@@ -9,6 +9,7 @@
     },
     {
       "name": "demoindex",
+      "isLogin": true,
       "path": "demo/index/index",
       "style": {
         "navigationBarTitleText": ""
@@ -23,6 +24,7 @@
     },
     {
       "name": "background",
+      "isLogin": true,
       "path": "demo/basics/background",
       "style": {
         "navigationBarTitleText": ""
@@ -183,7 +185,7 @@
       }
     },
     {
-      "name": "verticalnav",
+      "name": "login",
       "path": "demo/plugin/verticalnav",
       "style": {
         "navigationBarTitleText": ""

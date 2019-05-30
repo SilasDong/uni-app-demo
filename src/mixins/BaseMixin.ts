@@ -11,7 +11,7 @@ export default Vue.extend({
   data() {
     return {
       $api: api,
-      $uniRoute: router,
+      $uniRouter: router,
       $http: uniHttp,
       $log: log,
       $util: util,
